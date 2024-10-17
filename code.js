@@ -1,7 +1,7 @@
 function hasCycle(graph) {
     for (node in graph) {
         for (child in node) {
-            result = depthFirstSearch(graph, child, targetNode);
+            result = depthFirstSearch(graph, child, node);
             if (result = true) {
                 return true;
             }
