@@ -1,6 +1,8 @@
 function hasCycle(graph) {
-    for (node in graph) {
-        for (child in node) {
+    for (i = 0; i < graph.length; i++) {
+        node = graph[i];
+        for (let j = 0; j < node.length; i++) {
+            child = node[j];
             result = depthFirstSearch(graph, child, node);
             if (result = true) {
                 return true;
@@ -39,3 +41,11 @@ function search(graph, currentNode, targetNode, path = [], visitedNodes = new Se
     path.pop();
     return null;
 }
+
+var graph = {
+    A:['B'],
+    B:['C'],
+    C:['A']
+};
+
+hasCycle(graph);
