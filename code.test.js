@@ -33,7 +33,7 @@ assert(JSON.stringify(hasCycle(graph3)) == JSON.stringify(true));
 
 var graph4 = {
     A: ['B', 'C'],
-    B: ['C'],
+    B: ['A', 'C'],
     C: ['A'],
 };
 assert(JSON.stringify(hasCycle(graph4)) == JSON.stringify(true));
