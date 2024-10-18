@@ -17,4 +17,4 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
-The worst-case is when there is no cycle. In this situation, the depthFirstSearch function is performed on every edge within the graph. The depthFirstSearch function, which was taken from my graph-search exercise, is Θ(V + E) complexity. The complexity of the entire hasCycle function is (E)(V + E) = (EV + E<sup>2</sup>). So, the complexity T(n) ∈ Θ(E<sup>2</sup>).
+The worst-case is when there is no cycle. In this situation, the depthFirstSearch function is performed on every edge within the graph so the loop in hasCycle has a complexity of (E). The depthFirstSearch function, which was taken from my graph-search exercise, is Θ(V + E) complexity. The complexity of the entire hasCycle function is (E)(V + E) = (EV + E<sup>2</sup>). So, the complexity T(n) ∈ Θ(E<sup>2</sup>).
