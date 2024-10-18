@@ -40,3 +40,9 @@ assert(JSON.stringify(hasCycle(graph4)) == JSON.stringify(true));
 
 var graph5 = { };
 assert(JSON.stringify(hasCycle(graph5)) == JSON.stringify(false));
+
+var graph6 = {
+    A: [],
+    B: [],
+    C: []
+};
