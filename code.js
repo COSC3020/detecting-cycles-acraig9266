@@ -6,9 +6,9 @@ function hasCycle(graph) {
         node = nodes[i];
         for (j = 0; j < nextNodes.length; j++) {
             child = nextNodes[1][j];
-            if (child != undefined) {
-                result = depthFirstSearch(graph, child[0], node[0]);
-                if (result != null && result.length > 2) {
+            if (child != undefined) {                                     // Ensures the child node existed and was assigned correctly because it was a problem early on
+                result = depthFirstSearch(graph, child[0], node[0]);      // Calls search on a child node and returns true if it can find a path to parent node when starting from the child 
+                if (result != null && result.length > 2) {                // Checks if a path back to parent was found and that the path is not the child going directly back to parent as cycles require 3 nodes involved
                     return true;
                 }
             }
@@ -41,7 +41,3 @@ function search(graph, currentNode, targetNode, visitedNodes = new Set(), path =
         }
     }
 }
-
-var graph = {
-};
-hasCycle(graph);
